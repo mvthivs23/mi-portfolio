@@ -1,0 +1,60 @@
+<div class="card bg-light" *ngIf="venta">
+    <div class="card-header">{{titulo}}: {{venta.descripcion}}</div>
+    
+    <div class="card-body">
+        <h4>
+            <a [routerLink]="['/clientes']" class="btn btn-primary btn-xs">&laquo; volver</a>
+        </h4>
+      
+
+        
+
+        <ul class="list-group my-2">
+            <li class="list-group-item list-group-item-primary">Datos del cliente</li>
+            <li class="list-group-item">Nombre: {{venta.cliente.nombre}}</li>
+            <li class="list-group-item">Direccion: {{venta.cliente.ubicacion}}</li>
+            <li class="list-group-item">Email: {{venta.cliente.email}}</li>
+            <li class="list-group-item">Telefono: {{venta.cliente.telefono}}</li>
+
+        </ul>
+
+        <ul class="list-group my-2">
+            <li class="list-group-item list-group-item-primary">Datos de la venta</li>
+            <li class="list-group-item">Folio: {{venta.id}}</li>
+            <li class="list-group-item">Descripcion: {{venta.descripcion}}</li>
+            <li class="list-group-item">Fecha: {{venta.createAt}}</li>
+        </ul>
+
+        <table class="table table-responsive table-hover table-bordered my-3" >
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of venta.items">
+                    <td>{{item.producto.nombre}}</td>
+                    <td>{{item.producto.precio}}</td>
+                    <td>{{item.cantidad}}</td>
+                    <td>{{item.importe}}</td>
+                </tr>
+                </tbody>
+        </table>
+        <h2 class="float-right" style="margin-left: 10px; margin-top: 70px;">
+           <span>Gran Total</span>: <span class="badge badge-secondary">${{venta.total}}</span>
+        </h2>
+
+        <div class="card border-info mb-4" style="max-width: 1000px;">
+            <div class="card card-header">
+                Observaciones
+            </div>
+            <div class="card card-body">
+                <p *ngIf="!venta.observacion">No tiene observacion</p>
+                <p *ngIf="venta.observacion">{{venta.observacion}}</p>
+            </div>
+        </div>
+    </div>
+</div>

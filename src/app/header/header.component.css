@@ -1,0 +1,14 @@
+.navbar{
+    position:relative;
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+
+.titulo{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 2px 2px 5px;
+    text-decoration: solid;
+    font-style: oblique;
+    font-weight: bold;
+}
