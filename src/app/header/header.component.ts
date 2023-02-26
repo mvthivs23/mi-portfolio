@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent{
 
-    title: string = 'Transportes Paredes Ltda.'
+    title: string = 'Matias Salazar Sanchez'
 }
