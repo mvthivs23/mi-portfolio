@@ -1,10 +1,11 @@
 .navbar{
-    position:fixed;
+    position: fixed;
+    z-index: 100;
     width: 100%;
     height: 100px;
     background-image: url('src/app/imagenes/devops.jpg');
     background-position: -500px -600px;
-    animation: backBanner 5s backwards;
+    animation: backBanner 6s infinite;
 
 }
 .titulo{

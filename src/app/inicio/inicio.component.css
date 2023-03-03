@@ -1,24 +1,41 @@
 .contenido-section {
-    background-color: #f2f2f2;
+  background-image: url('src/app/imagenes/puntitos.jpg');
+background-size: 1500px;
     padding: 60px 0;
     margin-top: 120px;
+    border-radius: 30px;
+    position:relative
   }
+
+  .contenido-section2 {
+    background-image: url('src/app/imagenes/puntitos.jpg');
+  background-size: 1500px;
+      padding: 60px 0;
+      border-radius: 30px;
+      position:relative
+    }
+
+
 
   .cajas-section {
     background-color: #fff;
     padding: 60px 0;
+    color: #f2f2f2;
   }
   
   .caja {
-    background-color: #f2f2f2;
+    background-image: url('src/app/imagenes/azul.jpg');
+    background-size: 1000px;
     border-radius: 5px;
     padding: 20px;
     text-align: center;
     margin-bottom: 30px;
+    border-radius: 30px;
   }
   
   .caja-title {
     font-size: 24px;
+    color: #f2f2f2;
     
   }
   
@@ -27,19 +44,20 @@
     font-weight: bold;
     margin-bottom: 30px;
     text-transform: uppercase;
-    animation: titulo-animacion 3s ease-in-out infinite;
+    animation: titulo-animacion 5s ease-in-out 1;
+    color: #f2f2f2;
     
   }
   
   @keyframes titulo-animacion {
     0% {
-      transform: translateX(-100%);
+      transform: translateX(-0%);
     }
     50% {
-      transform: translateX(100%);
+      transform: translateX(10%);
     }
     100% {
-      transform: translateX(-100%);
+      transform: translateX(-0%);
     }
   }
 
@@ -50,21 +68,16 @@
     left: 0;
     width: 0;
     overflow: hidden;
-    animation: titulo-animacion 3s linear forwards;
+    animation: titulo-animacion 5s linear forwards;
   }
 
-  @keyframes titulo-animacion {
-    0% {
-      width: 0;
-    }
-    100% {
-      width: 100%;
-    }
-  }
+ 
   
   .contenido-text {
     font-size: 18px;
     line-height: 1.5;
+    color: #f2f2f2;
+
   }
   
   @media (max-width: 768px) {
