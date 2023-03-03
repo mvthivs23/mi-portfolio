@@ -1,8 +1,7 @@
 .navbar{
     position:fixed;
     width: 100%;
-    height: 150px;
-    padding-bottom: 100px;
+    height: 100px;
     background-image: url('src/app/imagenes/devops.jpg');
     background-position: -500px -600px;
     animation: backBanner 5s backwards;

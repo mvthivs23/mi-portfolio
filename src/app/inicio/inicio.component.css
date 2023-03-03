@@ -1,29 +1,78 @@
-.tarjeta{
-    height: 3000px;
-    width: 100%;
-    border-radius: 30px;
-    font-size: large;
-    background-image: url('src/app/imagenes/fon.jpg');
-    background-size: 2000px;
+.contenido-section {
+    background-color: #f2f2f2;
+    padding: 60px 0;
+    margin-top: 120px;
+  }
 
-    
-
-}
-
-
-
-.titulo{
-    font-style: oblique;
+  .cajas-section {
+    background-color: #fff;
+    padding: 60px 0;
+  }
+  
+  .caja {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 20px;
     text-align: center;
-}
-
-.tarjeta > h5{
-    font-size: 90px;
-}
-
-.card-text{
+    margin-bottom: 30px;
+  }
+  
+  .caja-title {
+    font-size: 24px;
+    
+  }
+  
+  .contenido-title {
+    font-size: 36px;
     font-weight: bold;
-    font-style: oblique;
-    font-size: large;
-}
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    animation: titulo-animacion 3s ease-in-out infinite;
+    
+  }
+  
+  @keyframes titulo-animacion {
+    0% {
+      transform: translateX(-100%);
+    }
+    50% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
 
+  .contenido-title:before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    overflow: hidden;
+    animation: titulo-animacion 3s linear forwards;
+  }
+
+  @keyframes titulo-animacion {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
+  .contenido-text {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+  @media (max-width: 768px) {
+    .contenido-title {
+      font-size: 28px;
+    }
+  
+    .contenido-text {
+      font-size: 16px;
+    }
+  }
