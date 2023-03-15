@@ -19,11 +19,14 @@ import {MatCardModule} from '@angular/material/card';
 import { PaginatorComponent } from './paginator/paginator.component';
 
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { SobreMiComponent } from './sobre-mi/sobre-mi.component';
 
 
 const routes: Routes = [
-{path: '', redirectTo: '/login', pathMatch: 'full'},
-{path: 'inicio', component: InicioComponent}
+{path: '', redirectTo: '/inicio', pathMatch: 'full'},
+{path: 'inicio', component: InicioComponent},
+{path: 'sobre-mi', component: SobreMiComponent}
+
 
 
 
@@ -38,7 +41,8 @@ const routes: Routes = [
     FooterComponent,
     InicioComponent,
     IndicadoresComponent,
-    PaginatorComponent
+    PaginatorComponent,
+    SobreMiComponent,
 
   ],
   imports: [

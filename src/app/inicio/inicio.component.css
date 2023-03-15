@@ -3,7 +3,7 @@
 background-size: 1500px;
     padding: 60px 0;
     margin-top: 120px;
-    border-radius: 30px;
+    border-radius: 10px;
     position:relative
   }
 
@@ -11,7 +11,7 @@ background-size: 1500px;
     background-image: url('src/app/imagenes/puntitos.jpg');
   background-size: 1500px;
       padding: 60px 0;
-      border-radius: 30px;
+      border-radius: 10px;
       position:relative
     }
 
@@ -21,16 +21,22 @@ background-size: 1500px;
     background-color: #fff;
     padding: 60px 0;
     color: #f2f2f2;
+
   }
   
   .caja {
-    background-image: url('src/app/imagenes/azul.jpg');
-    background-size: 1000px;
+background-color: #7D57CF;
     border-radius: 5px;
     padding: 20px;
     text-align: center;
     margin-bottom: 30px;
-    border-radius: 30px;
+    border-radius: 10px;
+    box-shadow: 4px 2px 8px rgba(0, 0, 0, 0.15);
+
+  }
+
+  .caja:hover {
+    box-shadow: 0 0 10px rgba(87, 33, 121);
   }
   
   .caja-title {
@@ -43,7 +49,7 @@ background-size: 1500px;
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 30px;
-    text-transform: uppercase;
+text-transform: initial;
     animation: titulo-animacion 5s ease-in-out 1;
     color: #f2f2f2;
     
@@ -89,3 +95,89 @@ background-size: 1500px;
       font-size: 16px;
     }
   }
+
+  .section2 {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin-top: 20px;
+    height: 200px;
+    text-align: center;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 100%;
+    }
+  
+    @media (min-width: 769px) and (max-width: 1024px) {
+      grid-template-columns: 40% 60%;
+    }
+  
+  }
+  
+  .sidebar {
+    background-color: gainsboro;
+    padding-top: 15px;
+    border-radius: 10px;
+    margin-right: 10px;
+    font-size: 30px;
+
+
+  }
+
+
+
+  
+  
+  .content {
+    background-color: grey;
+    border-radius: 10px;
+    font-size: 30px;
+    padding-top: 15px;
+
+  }
+
+  .cloud-box {
+    position: relative;
+    margin-top: 20px;
+    padding: 1rem;
+    background-image: url('src/app/imagenes/devops.jpg');
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    height: auto;
+  }
+
+  .cloud-box > p{
+    text-align: center;
+    color: #f2f2f2;
+    margin: 20px;
+    margin-top: 65px;
+    margin-bottom: 95px;
+  }
+  
+  .cloud-box:before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    transform: rotate(45deg);
+  }
+  
+  .cloud-box:after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    transform: rotate(45deg);
+  }
+  
+  
