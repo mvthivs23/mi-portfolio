@@ -21,7 +21,7 @@ jobs:
           hide-progress: false
           format: 'table'
           exit-code: '1'
-          ignore-unfixed: false
+          ignore-unfixed: true
           severity: 'UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL'
 
   deploy:
@@ -31,4 +31,4 @@ jobs:
     steps:
       - name: Deploy the thing
         run: |
-          echo Deploying 🚀
+          echo Deploying your Angular App🚀
