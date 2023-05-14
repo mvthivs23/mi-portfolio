@@ -25,7 +25,7 @@ jobs:
           severity: 'UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL'
 
   deploy:
-    name: deploy 🚀
+    name: deploy Angular App 🚀
     needs: [trivy]
     runs-on: ubuntu-latest
     steps:
