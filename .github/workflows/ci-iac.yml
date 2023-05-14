@@ -1,0 +1,12 @@
+name: CI Infra as Code
+on:
+  [workflow_dispatch, push]
+concurrency: ci-${{ github.ref }}
+jobs:
+
+  trivy:
+    name: Run Trivy (Iac and fs mode)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v3
