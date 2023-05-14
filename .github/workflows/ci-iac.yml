@@ -19,7 +19,7 @@ jobs:
           format: 'table'
           exit-code: '1'
           ignore-unfixed: true
-          severity: 'MEDIUM,HIGH,CRITICAL'
+          severity: 'UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL'
 
   deploy:
     name: deploy 🚀
