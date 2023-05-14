@@ -20,3 +20,12 @@ jobs:
           exit-code: '1'
           ignore-unfixed: true
           severity: 'MEDIUM,HIGH,CRITICAL'
+
+  deploy:
+    name: deploy 🚀
+    needs: [trivy]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy the thing
+        run: |
+          echo Deploying 🚀
