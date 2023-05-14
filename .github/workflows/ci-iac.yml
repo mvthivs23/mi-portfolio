@@ -24,28 +24,6 @@ jobs:
           ignore-unfixed: true
           severity: 'UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL'
 
-
-  sonarQube:
-  on:
-    push:
-      branches:
-        - master
-    pull_request:
-      types: [opened, synchronize, reopened]
-
-name: Main Workflow
-
-jobs:
-  sonarqube:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-
-
-
   deploy:
     name: deploy Angular App 🚀
     needs: [trivy]
