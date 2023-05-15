@@ -1,4 +1,10 @@
-docker-build:
+name: CI App
+on:
+  [workflow_dispatch, push]
+concurrency: ci-app-${{ github.ref }}
+jobs:
+
+  docker-build:
     name: Build Docker image
     outputs:
       full_docker_image_tag: ${{ steps.build_image.outputs.full_docker_image_tag }}
