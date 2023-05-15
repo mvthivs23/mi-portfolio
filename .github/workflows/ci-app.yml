@@ -4,6 +4,23 @@ on:
 concurrency: ci-app-${{ github.ref }}
 jobs:
 
+
+  docker-grype-project:
+    name: Grype (Anchore) Project Scan
+    needs: [gitleaks]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v3
+
+      - name: Scan current project with Grype (Anchore)
+        id: scan-project
+        uses: anchore/scan-action@v3
+        with:
+          path: "."
+          fail-build: false
+          output-format: table        
+
   docker-build:
     name: Build Docker image
     outputs:
