@@ -4,6 +4,18 @@ on:
 concurrency: ci-app-${{ github.ref }}
 jobs:
 
+  gitleaks:
+    name: gitleaks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: run gitleaks docker
+        run: |
+          docker run -v ${PWD}:/path zricethezav/gitleaks:latest detect --source="/path/" -v -l debug --no-git
+
 
   docker-grype-project:
     name: Grype (Anchore) Project Scan
@@ -27,7 +39,7 @@ jobs:
       full_docker_image_tag: ${{ steps.build_image.outputs.full_docker_image_tag }}
       image_tag: ${{ steps.build_image.outputs.image_tag }}
     runs-on: ubuntu-latest
-    needs: [trivy]
+    needs: [docker-grype-project]
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v3
