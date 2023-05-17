@@ -6,7 +6,11 @@ on:
        - main 
 
 jobs:
-  deploy:
+
+
+
+  install-dependencies:
+    name: Install dependencies npm
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -19,7 +23,7 @@ jobs:
         run: npm install
   
   trivy:
-    name: RUn Trivy (fs mode)
+    name: Run Trivy (fs mode)
     runs-on: ubuntu-latest
     steps:
       - name: Run Trivy vulnerability scanner in fs mode
@@ -40,7 +44,7 @@ jobs:
       full_docker_image_tag: ${{ steps.build_image.outputs.full_docker_image_tag }}
       image_tag: ${{ steps.build_image.outputs.image_tag }}
     runs-on: ubuntu-latest
-    needs: [trivy]
+    needs: [install-dependencies, trivy]
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v3
@@ -58,8 +62,8 @@ jobs:
         id: build_image
         env:
           REGISTRY: ghcr.io
-          IMAGE_NAME: ${{ github.repository }}
-          ECR_REPOSITORY: ${{ github.repository }}
+          IMAGE_NAME: 'mvthivs23/mi-portfolio'
+          ECR_REPOSITORY: 'mvthivs23/mi-portfolio'
           IMAGE_TAG: ${{ env.IMAGE_TAG }}
         run: |
           echo REGISTRY: $REGISTRY
