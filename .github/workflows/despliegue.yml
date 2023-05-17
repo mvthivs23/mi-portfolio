@@ -135,7 +135,7 @@ jobs:
   despliegue:
     name: deploy
     runs-on: ubuntu-latest
-    needs: [docker-grype,docker-trivy-vuln]
+    needs: [docker-trivy-vuln]
     steps:
       - name: Deploy the thing
         run: |
