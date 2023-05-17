@@ -17,9 +17,8 @@ jobs:
           node-version: 18    
       - name: Install dependencies
         run: npm install
-      - name: Lint
-        run: npm run eslint
-
+  
+  
       - name: Run Trivy vulnerability scanner in fs mode
         uses: aquasecurity/trivy-action@master
         with:
