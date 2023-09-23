@@ -1,12 +1,17 @@
+
+
+/*INICIO*/
 .contenido-section {
   background-image: url('src/app/imagenes/puntitos.jpg');
-background-size: 1500px;
-    padding: 60px 0;
-    margin-top: 120px;
+background-size: 1800px;
+    padding: 100px 0;
+    margin-top: 80px;
     border-radius: 10px;
     position:relative
   }
 
+
+  /*CERTIFICACIONES*/
   .contenido-section2 {
     background-image: url('src/app/imagenes/puntitos.jpg');
   background-size: 1500px;
@@ -16,20 +21,29 @@ background-size: 1500px;
     }
 
 
+    /*TEXTO NEGRITA*/
+    .bold-text {
+      font-weight: bold;
+    }
 
+    /*SECCION CAJAS*/
   .cajas-section {
     background-color: #fff;
-    padding: 60px 0;
+    padding: 20px 0;
     color: #f2f2f2;
 
   }
   
   .caja {
-background-color: #7D57CF;
-    border-radius: 5px;
+    /*background-color: #011b33 color similar al de la imagen*/
+background-color: #3085da;
     padding: 20px;
     text-align: center;
-    margin-bottom: 30px;
+    height: 200px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-left: 30px;
+    margin-right: 40px;
     border-radius: 10px;
     box-shadow: 4px 2px 8px rgba(0, 0, 0, 0.15);
 
@@ -98,17 +112,19 @@ text-transform: initial;
 
   .section2 {
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 20% 80%;
     margin-top: 20px;
     height: 200px;
+    margin-top: 10px;
     text-align: center;
 
     @media (max-width: 768px) {
       grid-template-columns: 100%;
     }
   
-    @media (min-width: 769px) and (max-width: 1024px) {
+    @media (min-width: 350px) and (max-width: 1024px) {
       grid-template-columns: 40% 60%;
+      gap: 0;
     }
   
   }

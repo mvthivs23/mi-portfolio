@@ -11,6 +11,10 @@
 
 }
 
+.bold-text {
+    font-weight: bold;
+  }
+
 .titulo{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-shadow: 2px 2px 5px;
