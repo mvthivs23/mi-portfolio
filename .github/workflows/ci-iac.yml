@@ -1,7 +1,7 @@
-name: CI Infra as Code
+name: CI Workflow
 on:
-  [workflow_dispatch, push]
-concurrency: ci-${{ github.ref }}
+  push:
+   branches: [ "main" ]
 jobs:
 
   trivy:
