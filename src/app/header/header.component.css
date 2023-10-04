@@ -11,6 +11,11 @@
 
 }
 
+.navbar-nav{
+    font-size: 20px;
+    margin-top: 15px;
+}
+
 .bold-text {
     font-weight: bold;
   }
@@ -21,14 +26,27 @@
     text-decoration: solid;
     font-style: oblique;
     font-weight: bold;
+    font-size: 40px;
+
+}
+
+.style-icon7{
+    color: white;
+    font-size: 20px;
+    text-shadow: 5px 5px 5px;
+    text-decoration: solid;
+    font-style: oblique;
+    font-weight: bold;
 }
 
 @keyframes backBanner {
     0%{
-        background-position: 0px 0px;
+        background-position: 1px 0px;
     }
     100%{
         background-position: -500px -600px;
 
     }
+
 }
+
