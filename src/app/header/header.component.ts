@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { faInfinity } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
     selector: 'app-header',
     templateUrl: './header.component.html',
@@ -6,6 +8,6 @@ import { Component } from '@angular/core';
 
 })
 export class HeaderComponent{
+icon7 = faInfinity;
 
-    title: string = 'Matias Salazar Sanchez'
 }

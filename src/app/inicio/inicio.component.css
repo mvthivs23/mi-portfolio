@@ -4,10 +4,11 @@
 .contenido-section {
   background-image: url('src/app/imagenes/puntitos.jpg');
 background-size: 1800px;
+background-repeat: no-repeat;
     padding: 100px 0;
-    margin-top: 80px;
+    margin-top: 70px;
     border-radius: 10px;
-    position:relative
+    position:relative;
   }
 
 
@@ -17,7 +18,8 @@ background-size: 1800px;
   background-size: 1500px;
       padding: 60px 0;
       border-radius: 10px;
-      position:relative
+      position:relative;
+      margin-top: 20px;
     }
 
 
@@ -27,27 +29,32 @@ background-size: 1800px;
     }
 
     /*SECCION CAJAS*/
-  .cajas-section {
-    background-color: #fff;
-    padding: 20px 0;
-    color: #f2f2f2;
+  
+
+  .skills {
+    text-align: center;
+    padding-top: 0px;
+    font-weight: 1000;
+    color: white;
 
   }
-  
   .caja {
     /*background-color: #011b33 color similar al de la imagen*/
-background-color: #3085da;
+background-color: #0f55e1;
     padding: 20px;
     text-align: center;
-    height: 200px;
     margin-bottom: 20px;
     margin-top: 15px;
     margin-left: 30px;
     margin-right: 40px;
-    border-radius: 10px;
-    box-shadow: 4px 2px 8px rgba(0, 0, 0, 0.15);
-
+    border-radius: 10%;
+    box-shadow: 8px 6px 12px rgba(0, 0, 0, 0.15);
+    animation: backBanner 9s alternate-reverse infinite;
   }
+
+
+
+
 
   .caja:hover {
     box-shadow: 0 0 10px rgba(87, 33, 121);
@@ -58,6 +65,11 @@ background-color: #3085da;
     color: #f2f2f2;
     
   }
+  .caja-text {
+   margin-bottom: 30px;
+    
+  }
+
   
   .contenido-title {
     font-size: 36px;
@@ -69,27 +81,7 @@ text-transform: initial;
     
   }
   
-  @keyframes titulo-animacion {
-    0% {
-      transform: translateX(-0%);
-    }
-    50% {
-      transform: translateX(10%);
-    }
-    100% {
-      transform: translateX(-0%);
-    }
-  }
-
-  .contenido-title:before{
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    overflow: hidden;
-    animation: titulo-animacion 5s linear forwards;
-  }
+  
 
  
   
@@ -182,6 +174,7 @@ text-transform: initial;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
     transform: rotate(45deg);
   }
+
   
   .cloud-box:after {
     content: "";
@@ -196,4 +189,79 @@ text-transform: initial;
     transform: rotate(45deg);
   }
   
-  
+  .style-icon {
+    font-size: 100px;
+    color: white;
+    transition: color 0.3s ease; /* Agrega una transición suave para el cambio de color */
+
+}
+
+.style-icon:hover {
+  color: black; /* Color diferente cuando el mouse está sobre el icono */
+  cursor: pointer; /* Cambia el cursor a un puntero para indicar interactividad */
+  transform: scale(6.2); /* Escala el icono al 120% del tamaño original */
+}
+
+.style-icon2 {
+  font-size: 100px;
+  color: white;
+  transition: color 0.3s ease; /* Agrega una transición suave para el cambio de color */
+}
+
+.style-icon2:hover {
+  color: black; /* Color diferente cuando el mouse está sobre el icono */
+  cursor: pointer; /* Cambia el cursor a un puntero para indicar interactividad */
+  transform: scale(6.2); /* Escala el icono al 120% del tamaño original */
+}
+
+
+.style-icon3 {
+  font-size: 100px;
+  color: white;
+  transition: color 0.3s ease; /* Agrega una transición suave para el cambio de color */
+
+}
+
+.style-icon3:hover {
+  color: black; /* Color diferente cuando el mouse está sobre el icono */
+  cursor: pointer; /* Cambia el cursor a un puntero para indicar interactividad */
+  transform: scale(6.2); /* Escala el icono al 120% del tamaño original */
+}
+
+.style-icon4 {
+  font-size: 100px;
+  color: white;
+  transition: color 0.3s ease; /* Agrega una transición suave para el cambio de color */
+
+}
+
+.style-icon4:hover {
+  color: black; /* Color diferente cuando el mouse está sobre el icono */
+  cursor: pointer; /* Cambia el cursor a un puntero para indicar interactividad */
+  transform: scale(6.2); /* Escala el icono al 120% del tamaño original */
+}
+
+.style-icon5 {
+  font-size: 100px;
+  color: white;
+  transition: color 0.3s ease; /* Agrega una transición suave para el cambio de color */
+
+}
+
+.style-icon5:hover {
+  color: black; /* Color diferente cuando el mouse está sobre el icono */
+  cursor: pointer; /* Cambia el cursor a un puntero para indicar interactividad */
+  transform: scale(6.2); /* Escala el icono al 120% del tamaño original */
+}
+.style-icon6 {
+  font-size: 100px;
+  color: white;
+  transition: color 0.3s ease; /* Agrega una transición suave para el cambio de color */
+
+}
+
+.style-icon6:hover {
+  color: black; /* Color diferente cuando el mouse está sobre el icono */
+  cursor: pointer; /* Cambia el cursor a un puntero para indicar interactividad */
+  transform: scale(6.2); /* Escala el icono al 120% del tamaño original */
+}
