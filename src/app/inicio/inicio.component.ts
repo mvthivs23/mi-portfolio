@@ -5,7 +5,7 @@ import { faJava } from '@fortawesome/free-brands-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLinux } from '@fortawesome/free-brands-svg-icons';
 import { faShieldHalved } from '@fortawesome/free-solid-svg-icons';
-
+import { faRobot } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -21,4 +21,5 @@ export class InicioComponent {
   icon4 = faGithub;
   icon5 = faLinux;
   icon6 = faShieldHalved;
+  icon7 = faRobot;
 }

@@ -3,9 +3,9 @@
     z-index: 100;
     width: 100%;
     margin-bottom: 20px;
-    background-image: url('src/app/imagenes/devops.jpg');
+    background-image: url('src/app/imagenes/puntitos.jpg');
     background-position: -500px -600px;
-    animation: backBanner 9s alternate-reverse infinite;
+    animation: backBanner 10s alternate-reverse infinite;
 
 
 
