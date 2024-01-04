@@ -1,15 +1,80 @@
 
 
-/*INICIO*/
+
+
+
+/* CONTENIDO SOBRE MI */
 .contenido-section {
-  background-image: url('src/app/imagenes/puntitos.jpg');
-background-size: 1800px;
+  background-image: url('src/app/imagenes/redes.jpeg');
+background-size: 1900px;
 background-repeat: no-repeat;
     padding: 100px 0;
     margin-top: 70px;
     border-radius: 10px;
     position:relative;
+    height: auto;
   }
+
+  /* Aplicar estilos específicos para pantallas con un ancho máximo de 768px (ajusta según tus necesidades) */
+@media only screen and (max-width: 768px) {
+  .contenido-section {
+      background-size: 1100px;
+      background-position: center;
+     
+  }
+}
+
+  .imagen-section {
+    text-align: center; /* Centra la imagen horizontalmente */
+    margin-top: 20px; /* Ajusta el espacio entre el contenido y la imagen según sea necesario */
+  }
+  
+  .imagen-section img {
+    border-radius: 50%; /* Da forma redondeada a la imagen */
+    width: 220px; /* Ajusta el ancho de la imagen según sea necesario */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    mask-image: linear-gradient(to bottom, transparent 0%, black 20%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%);
+  }
+
+
+
+ /* BOTONES CONTACTO*/
+  .botones-section {
+    display: flex;
+    justify-content: center; /* Alinea los botones al centro */
+    margin-top: 50px;
+    margin-bottom: 90px;
+    
+  }
+
+  .botones-section button {
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 20px;
+  }
+
+  /* Consulta de medios para pantallas de hasta 600px de ancho (ajusta este valor según sea necesario) */
+@media only screen and (max-width: 760px) {
+  .botones-section {
+    margin-bottom: 0px; /* Cambia el valor para la vista de celular */
+    
+  }
+
+  .botones-section button {
+    font-size: 12px; /* Tamaño específico para dispositivos móviles */
+  }
+}
+
+  .botones-project  {
+    display: flex;
+    justify-content: center; /* Alinea los botones al centro */
+    margin-bottom: 20px;
+  }
+
+
+
+
 
 
   /*CERTIFICACIONES*/
@@ -33,20 +98,38 @@ background-repeat: no-repeat;
 
   .skills {
     text-align: center;
-    padding-top: 0px;
-    font-weight: 1000;
-    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 100px;
+    border-top: 2px solid black; /* Borde superior de 2px sólido negro */
+    border-bottom: 2px solid black; /* Borde inferior de 2px sólido negro */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total del elemento */
+    color:  black ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 2px 2px 5px;
+    text-decoration: solid;
+    font-style: oblique;
+    font-weight: bold;
+    text-align: center;
+    
+    
 
   }
+  .caja {
+    /*background-color: #011b33 color similar al de la imagen*/
+    background-color:  #a40ba2 ;    
     padding: 20px;
     text-align: center;
     margin-bottom: 20px;
-    margin-top: 15px;
+    margin-top: 35px;
     margin-left: 30px;
     margin-right: 40px;
     border-radius: 10%;
     box-shadow: 8px 6px 12px rgba(0, 0, 0, 0.15);
     animation: backBanner 9s alternate-reverse infinite;
+    border: 2px solid fuchsia; /* Agrega el borde fucsia */
   }
 
 
@@ -54,7 +137,7 @@ background-repeat: no-repeat;
 
 
   .caja:hover {
-    box-shadow: 0 0 10px rgba(87, 33, 121);
+    box-shadow: 0 0 10px rgb(156, 50, 236);
   }
   
   .caja-title {
@@ -62,32 +145,40 @@ background-repeat: no-repeat;
     color: #f2f2f2;
     
   }
+  .caja-text {
+   margin-bottom: 30px;
+    
+  }
 
   
   .contenido-title {
-    font-size: 36px;
+    font-size: 50px;
     font-weight: bold;
     margin-bottom: 30px;
 text-transform: initial;
     animation: titulo-animacion 5s ease-in-out 1;
-    color: #f2f2f2;
+    color:  #29a6e4 ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 2px 2px 5px;
+    text-decoration: solid;
+    font-style: oblique;
+    font-weight: bold;
+    text-align: center;
     
   }
   
   
-
- 
-  
   .contenido-text {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.5;
-    color: #f2f2f2;
+    color:     #bdbdbb ;
+    padding-top: 50px;
 
   }
   
   @media (max-width: 768px) {
     .contenido-title {
-      font-size: 28px;
+      font-size: 30px;
     }
   
     .contenido-text {
@@ -95,93 +186,108 @@ text-transform: initial;
     }
   }
 
+ 
+
+
+
+  /* ZONA DE PROYECTOS */
+
+  
+  .outer-box {
+    padding: 1rem;
+    background-color:  #f2f2f3 ;
+    margin-top: 50px;
+    border-radius: 10px;
+  }
+  
+  .inner-box {
+    position: relative;
+    background-color:  #f2f2f3 ;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    height: auto;
+  }
+  
+  .inner-box > p {
+    font-size: 22px;
+    line-height: 1.0;
+    color: black;
+    margin: 20px;
+    margin-top: 65px;
+    margin-bottom: 95px;
+  }
+  
+  .title-project {
+    font-size: 36px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    color:  #29a6e4 ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 2px 2px 5px;
+    text-decoration: solid;
+    font-style: oblique;
+    font-weight: bold;
+  }
+
+
+
+
+
+
+
+
+
+
+  /* BARRAS LATERALES */
   .section2 {
     display: grid;
-    grid-template-columns: 20% 80%;
-    margin-top: 20px;
+    grid-template-columns: 30% 70%;
+    margin-top: 100px;
     height: 200px;
-    margin-top: 10px;
     text-align: center;
-
+  
     @media (max-width: 768px) {
-      grid-template-columns: 100%;
+      grid-template-columns: 1fr; /* Cambia a una columna en vista móvil */
     }
   
-    @media (min-width: 350px) and (max-width: 1024px) {
-      grid-template-columns: 40% 60%;
-      gap: 0;
+    @media (min-width: 768px) and (max-width: 1024px) {
+      grid-template-columns: 30% 70%; /* Mantiene 30% 70% en vista de escritorio */
     }
+  }
   
+  .sidebar, .content {
+    box-sizing: border-box;
+    margin-bottom: 10px; /* Espacio inferior en dispositivos móviles */
   }
   
   .sidebar {
     background-color: gainsboro;
-    padding-top: 15px;
+    padding: 15px; /* Agrega espacio a los lados */
     border-radius: 10px;
-    margin-right: 10px;
     font-size: 30px;
-
-
   }
-
-
-
-  
   
   .content {
     background-color: grey;
     border-radius: 10px;
     font-size: 30px;
     padding-top: 15px;
-
-  }
-
-
-  .cloud-box {
-    position: relative;
-    margin-top: 20px;
-    padding: 1rem;
-    background-image: url('src/app/imagenes/devops.jpg');
-    border-radius: 10px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
-    overflow: hidden;
-    height: auto;
-  }
-
-  .cloud-box > p{
-    text-align: center;
-    color: #f2f2f2;
-    margin: 20px;
-    margin-top: 65px;
-    margin-bottom: 95px;
+  
+    @media (max-width: 768px) {
+      margin-left: 0; /* Elimina el margen izquierdo en vista móvil */
+    }
+  
+    @media (min-width: 768px) {
+      margin-left: 10px; /* Agrega margen a la izquierda en vista de escritorio */
+    }
   }
   
-  .cloud-box:before {
-    content: "";
-    position: absolute;
-    top: -50px;
-    left: -50px;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: #fff;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
-    transform: rotate(45deg);
-  }
-
   
-  .cloud-box:after {
-    content: "";
-    position: absolute;
-    bottom: -30px;
-    right: -30px;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-color: #fff;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
-    transform: rotate(45deg);
-  }
+ 
+ 
   
   .style-icon {
     font-size: 100px;
