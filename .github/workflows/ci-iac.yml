@@ -14,6 +14,7 @@ jobs:
 
   trivy:
     name: Run Trivy (Iac and fs mode)
+    needs: [npm]
     runs-on: ubuntu-latest
     steps:
       - name: Check out Git repository
@@ -27,6 +28,8 @@ jobs:
           exit-code: '1'
           ignore-unfixed: true
           severity: 'UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL'
+
+          
 
   deploy:
     name: deploy Angular App 🚀
