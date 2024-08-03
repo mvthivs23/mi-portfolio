@@ -6,7 +6,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLinux } from '@fortawesome/free-brands-svg-icons';
 import { faShieldHalved } from '@fortawesome/free-solid-svg-icons';
 import { faRobot } from '@fortawesome/free-solid-svg-icons';
-
+import { faCloud } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -22,4 +22,5 @@ export class InicioComponent {
   icon5 = faLinux;
   icon6 = faShieldHalved;
   icon7 = faRobot;
+  icon8 = faCloud;
 }

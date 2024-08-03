@@ -365,3 +365,17 @@ text-transform: initial;
   cursor: pointer; /* Cambia el cursor a un puntero para indicar interactividad */
   transform: scale(6.2); /* Escala el icono al 120% del tamaño original */
 }
+
+.style-icon8 {
+  font-size: 100px;
+  color: white;
+  transition: color 0.3s ease; /* Agrega una transición suave para el cambio de color */
+
+}
+
+.style-icon8:hover {
+  color: black; /* Color diferente cuando el mouse está sobre el icono */
+  cursor: pointer; /* Cambia el cursor a un puntero para indicar interactividad */
+  transform: scale(6.2); /* Escala el icono al 120% del tamaño original */
+}
+
