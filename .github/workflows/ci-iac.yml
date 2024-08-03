@@ -14,9 +14,24 @@ jobs:
       - name: Install npm dependencies
         run: npm install
 
+   checkout-code:
+     name: Checkout code
+     needs: [install-dependencies]
+     runs-on: ubuntu-latest
+     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          # super-linter needs the full git history to get the
+          # list of files that changed across commits
+          fetch-depth: 0
+
+      - name: Super-linter
+        uses: super-linter/super-linter@v6.8.0     
+
   trivy:
     name: Run Trivy (Iac and fs mode)
-    needs: [install-dependencies]
+    needs: [checkout-code]
     runs-on: ubuntu-latest
     steps:
       - name: Check out Git repository
