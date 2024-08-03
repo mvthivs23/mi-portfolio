@@ -1,7 +1,7 @@
 name: CI Workflow
-on:
-  push:
-   branches: [ "feature-AppFront" ]
+on: [pull_request]
+  
+
 jobs:
 
   install-dependencies:
