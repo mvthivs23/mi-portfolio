@@ -4,21 +4,16 @@ on:
    branches: [ "feature-AppFront" ]
 jobs:
 
-  npm:
-    name: Install npm dependencies
-    runs-on: ubuntu-latest
-    steps:
-     - name: Install npm dependencies
-       run: npm install
-
-
   trivy:
     name: Run Trivy (Iac and fs mode)
-    needs: [npm]
     runs-on: ubuntu-latest
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v3
+
+      - name: Install npm dependencies
+        run: npm install
+
       - name: Run Trivy vulnerability scanner in fs mode
         uses: aquasecurity/trivy-action@master
         with:
@@ -29,10 +24,8 @@ jobs:
           ignore-unfixed: true
           severity: 'UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL'
 
-          
-
   deploy:
-    name: despliegue Angular App 🚀
+    name: deploy Angular App 🚀
     needs: [trivy]
     runs-on: ubuntu-latest
     steps:
