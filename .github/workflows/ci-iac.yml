@@ -13,11 +13,10 @@ jobs:
 
       - name: Install npm dependencies
         run: npm install
-
-
+        
   trivy:
     name: Run Trivy (Iac and fs mode)
-    needs: [checkout-code]
+    needs: [install-dependencies]
     runs-on: ubuntu-latest
     steps:
       - name: Check out Git repository
