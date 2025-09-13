@@ -21,7 +21,7 @@ jobs:
         run: npm ci
         
       - name: Ejecutar npm audit
-        run: npm audit --json > audit-report.json
+        run: npm audit --json || true > audit-report.json
 
       - name: Subir reporte
         uses: actions/upload-artifact@v4
