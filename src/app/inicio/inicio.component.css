@@ -102,11 +102,9 @@ background-repeat: no-repeat;
     padding-bottom: 20px;
     font-size: 36px;
     font-weight: bold;
-    margin-top: 100px;
-    border-top: 2px solid black; /* Borde superior de 2px sólido negro */
-    border-bottom: 2px solid black; /* Borde inferior de 2px sólido negro */
+    margin-top: 40px;
     box-sizing: border-box; /* Incluye el padding y el borde en el ancho total del elemento */
-    color:  black ;
+    color:  #29a6e4 ;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-shadow: 2px 2px 5px;
     text-decoration: solid;
@@ -119,10 +117,10 @@ background-repeat: no-repeat;
   }
   .caja {
     /*background-color: #011b33 color similar al de la imagen*/
-    background-color:  #a40ba2 ;    
+    background-color:  #5f0253 ;    
     padding: 20px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
     margin-top: 35px;
     margin-left: 30px;
     margin-right: 40px;
@@ -195,14 +193,15 @@ text-transform: initial;
   
   .outer-box {
     padding: 1rem;
-    background-color:  #f2f2f3 ;
+    background-color:  #010f1e ;
     margin-top: 50px;
     border-radius: 10px;
+    text-align: center;
   }
   
   .inner-box {
     position: relative;
-    background-color:  #f2f2f3 ;
+    background-color:  #010f1e;
     border-radius: 10px;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
     overflow: hidden;
@@ -212,7 +211,7 @@ text-transform: initial;
   .inner-box > p {
     font-size: 22px;
     line-height: 1.0;
-    color: black;
+    color:     #bdbdbb ;
     margin: 20px;
     margin-top: 65px;
     margin-bottom: 95px;
@@ -379,3 +378,230 @@ text-transform: initial;
   transform: scale(6.2); /* Escala el icono al 120% del tamaño original */
 }
 
+#education {
+  padding: 50px 20px;
+  background-color: #1b1b1b;
+  border-radius: 10px;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+#education h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #008cba;
+}
+
+.education-item {
+  background-color: #2b2b2b;
+  border: 2px solid #004488;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.education-item h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #00aaff;
+}
+
+.education-item p {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  color: #dcdcdc;
+}
+
+.education-item .year {
+  font-size: 1em;
+  color: #aaaaaa;
+  font-style: italic;
+}
+
+
+#experience {
+  padding: 50px 20px;
+  background-color: #1b1b1b;
+  border-radius: 10px;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+#experience h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #008cba;
+}
+
+.experience-item {
+  background-color: #2b2b2b;
+  border: 2px solid #004488;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.experience-item h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #00aaff;
+}
+
+.experience-item p {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  color: #dcdcdc;
+}
+
+.experience-item .year {
+  font-size: 1em;
+  color: #aaaaaa;
+  font-style: italic;
+}
+
+#about-me {
+  padding: 50px 20px;
+  background-color: #1b1b1b;
+  border-radius: 15px;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#about-me h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #008cba;
+}
+
+.about-me-content {
+  background: linear-gradient(145deg, #2b2b2b, #1f1f1f);
+  border: 2px solid #004488;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.about-me-content p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  color: #dcdcdc;
+  line-height: 1.6;
+}
+
+
+#technologies {
+  padding: 50px 20px;
+  background-color: #1b1b1b;
+  border-radius: 10px;
+  color: #ffffff; /* Texto blanco */
+  text-align: center;
+  margin-top: 20px;
+}
+
+#technologies h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #00aaff; /* Azul brillante para el título */
+}
+
+.tech-container {
+  position: relative;
+  overflow: hidden; /* Oculta las barras de desplazamiento por defecto */
+}
+
+.tech-scroll {
+  display: flex;
+  overflow-x: auto; /* Permite el desplazamiento horizontal */
+  overflow-y: hidden; /* Evita el desplazamiento vertical */
+  gap: 20px;
+  padding: 10px;
+  scroll-behavior: smooth;
+  background-color: #1b1b1b;
+  white-space: nowrap; /* Mantiene las cajas en una sola línea */
+  scrollbar-width: thin; /* Estilo de la barra de desplazamiento en Firefox */
+  scrollbar-color: #00aaff #121212; /* Color de la barra de desplazamiento en Firefox */
+}
+
+.tech-scroll::-webkit-scrollbar {
+  height: 8px; /* Altura de la barra de desplazamiento en Chrome/Safari */
+}
+
+.tech-scroll::-webkit-scrollbar-thumb {
+  background: #00aaff; /* Color del pulgar de la barra de desplazamiento */
+  border-radius: 8px;
+}
+
+.tech-scroll::-webkit-scrollbar-track {
+  background: #121212; /* Fondo de la barra de desplazamiento */
+}
+
+.tech-item {
+  background-color: #068b87; /* Fondo más oscuro para los ítems */
+  border: 2px solid #004488; /* Borde azul oscuro */
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  color: #ffffff; /* Texto blanco */
+  font-size: 1.2em;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  flex: 0 0 auto; /* Evita que los ítems se reduzcan en tamaño */
+  min-width: 150px; /* Ancho mínimo para las cajas */
+}
+
+#certifications {
+  padding: 50px 20px;
+  background-color: #1b1b1b;
+  border-radius: 10px;
+  color: #ffffff; /* Texto blanco */
+  text-align: center;
+  margin-top: 20px;
+}
+
+#certifications h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #00aaff; /* Azul brillante para el título */
+}
+
+.cert-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Centra los ítems */
+}
+
+.cert-item {
+  background-color: #1e1e1e; /* Fondo más oscuro para las cajas */
+  border: 2px solid #004488; /* Borde azul oscuro */
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  color: #ffffff; /* Texto blanco */
+  font-size: 1.2em;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  flex: 1 1 250px; /* Permite que las cajas se ajusten y se envuelvan */
+  min-width: 200px; /* Ancho mínimo para las cajas */
+}
+
+.cert-item h3 {
+  margin-bottom: 10px;
+  color: #00aaff; /* Azul brillante para los títulos */
+}
+
+.cert-item p {
+  font-size: 1em;
+  color: #999; /* Gris claro para el texto */
+}

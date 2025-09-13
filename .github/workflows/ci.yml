@@ -1,0 +1,24 @@
+name: Security Audit
+
+on: 
+  push:
+    branches: [ "feature-AppFront" ]
+
+jobs:
+  npm-audit:
+    runs-on: ubuntu-latest
+    
+    steps: 
+      - name: Checkout codigo
+        uses: actions/checkout@v4
+
+      - name: Configurar node js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Instalar dependencias
+        run: npm ci
+        
+      - name: Ejecutar npm audit
+        run: npm audit --audit-level-high
