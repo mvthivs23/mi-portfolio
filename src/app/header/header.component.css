@@ -1,52 +1,107 @@
-.navbar{
+/* ENCABEZADO */
+.navbar {
     position: fixed;
     z-index: 100;
     width: 100%;
     margin-bottom: 20px;
-    background-image: url('src/app/imagenes/puntitos.jpg');
-    background-position: -500px -600px;
-    animation: backBanner 10s alternate-reverse infinite;
-
-
-
-}
-
-.navbar-nav{
-    font-size: 20px;
-    margin-top: 15px;
-}
-
-.bold-text {
+    background: linear-gradient(-45deg, #0d0d0d, #1a1a1a, #0a1f33, #003366);
+    background-size: 400% 400%;
+    animation: backBanner 15s ease infinite;
+  }
+  
+  /* Navbar interno */
+  .navbar-custom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Botón hamburguesa circular */
+  .custom-burger {
+    background-color: #003366; /* círculo */
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .custom-burger:hover {
+    background: #ffffff;
+  }
+  
+  .burger-lines,
+  .burger-lines::before,
+  .burger-lines::after {
+    content: "";
+    display: block;
+    background-color: white;
+    height: 3px;
+    width: 22px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  .custom-burger:hover .burger-lines,
+  .custom-burger:hover .burger-lines::before,
+  .custom-burger:hover .burger-lines::after {
+    background-color: #003366;
+  }
+  
+  .burger-lines {
+    position: relative;
+  }
+  
+  .burger-lines::before {
+    position: absolute;
+    top: -7px;
+  }
+  
+  .burger-lines::after {
+    position: absolute;
+    top: 7px;
+  }
+  
+  /* Imagen personal */
+  .imagen-section img {
+    border-radius: 50%;
+    width: 50px;
+    height: auto;
+    mask-image: linear-gradient(to bottom, transparent 0%, black 20%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%);
+  }
+  
+  /* Nombre / título */
+  .titulo {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+                 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+    font-style: oblique;
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 10px;
+    color: #ffffff;
+  }
+  
+  .bold-text {
     font-weight: bold;
   }
-
-.titulo{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-shadow: 2px 2px 5px;
-    text-decoration: solid;
-    font-style: oblique;
-    font-weight: bold;
-    font-size: 40px;
-
-}
-
-.style-icon7{
-    color: white;
-    font-size: 20px;
-    text-shadow: 5px 5px 5px;
-    text-decoration: solid;
-    font-style: oblique;
-    font-weight: bold;
-}
-
-@keyframes backBanner {
-    0%{
-        background-position: 1px 0px;
+  
+  /* Animación del gradiente */
+  @keyframes backBanner {
+    0% {
+      background-position: 0% 50%;
     }
-    100%{
-        background-position: -500px -600px;
-
+    50% {
+      background-position: 100% 50%;
     }
-
-}
-
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  

@@ -1,39 +1,33 @@
 <header class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="titulo">
-    <a class="navbar-brand" routerLink="/inicio">MatiDevops</a>
-    <fa-icon [icon]="icon7" class="style-icon7"></fa-icon>
-
+  <div class="navbar-custom">
+    <!-- Izquierda: Imagen + Nombre -->
+    <div class="d-flex align-items-center">
+      <div class="imagen-section">
+        <img src="/assets/imag-personal.jpeg" alt="Matias Salazar">
+      </div>
+      <a class="navbar-brand titulo ml-2" routerLink="/inicio">Matias Salazar</a>
     </div>
-   
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link bold-text" routerLink="/inicio">Inicio</a>
-        </li>
-        <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link bold-text" routerLink="/sobre-mi">Sobre mi</a>
-        </li>
-    
-     
-       
-        
-        <li class="nav-item">
-          <a class="nav-link disabled bold-text" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
 
-        <li class="nav-item dropdown">
-          
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" routerLink="/inicio">Inicio</a>
-          </div>
-        </li>
-      </ul>
-      
-      
-    </div>
-    
-    </header>
+    <!-- Derecha: Botón hamburguesa (solo visible en móviles) -->
+    <button class="navbar-toggler custom-burger d-lg-none" type="button" data-toggle="collapse" 
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="burger-lines"></span>
+    </button>
+  </div>
+
+  <!-- Menú colapsable -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link bold-text" routerLink="/inicio">Inicio</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link bold-text" routerLink="/sobre-mi">Sobre mi</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled bold-text" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+  </div>
+</header>
